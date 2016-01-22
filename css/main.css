@@ -1,0 +1,103 @@
+html {
+    height: 100%;
+}
+
+video 
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -10;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
+    background: transparent url(../content/NY-Static.jpg) no-repeat;
+    background-size: cover;
+}
+
+.divCenter {
+   position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.mySideBard{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 200px;
+    background-color: rgba(10,10,10,0.9);
+    z-index: 150;
+    color: white;
+    padding: 50px 0px 0px 0px;
+ }
+ul{
+    padding: 0px 0px 0px 0px;
+}
+.liTitle
+{
+    list-style-type: none;
+    text-indent: 15px;
+    color: white;
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+li
+{
+    list-style-type: none;
+    text-indent: 20px;
+    color: white;
+}
+li:hover
+{
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+li a 
+{
+    line-height: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+li a:hover, li a:visited
+{
+    text-decoration: none !important;
+    color: inherit;
+}
+
+li a:active
+{
+    text-decoration: none;
+    color: white;
+}
+
+.labelTogler{
+    position: fixed;
+    top: 45px;
+    left: 230px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    /*margin: 200px;*/
+}
+
+#sidebartoggler {
+    display: none;
+}
+
+#sidebartoggler:checked + .mySideBard {
+    left: -200px; 
+}
+
+#sidebartoggler:checked + .mySideBard + .labelTogler {
+    left: 50px; 
+}
