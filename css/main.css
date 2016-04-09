@@ -1,8 +1,9 @@
+/*make the html as big as the page displayed*/
 html {
     height: 100%;
 }
-
-video 
+/**/
+video
 {
     position: fixed;
     top: 50%;
@@ -14,10 +15,10 @@ video
     z-index: -10;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translate(-50%, -50%);
-    background: transparent url(../content/NY-Static.jpg) no-repeat;
+    background: transparent url(../content/Woods-Static.jpg) no-repeat;
     background-size: cover;
 }
-
+/**/
 .divCenter {
    position: absolute;
     left: 50%;
@@ -25,7 +26,7 @@ video
     transform: translate(-50%, -50%);
     color: white;
 }
-
+/**/
 .mySideBard{
     position: absolute;
     top: 0px;
@@ -36,10 +37,12 @@ video
     z-index: 150;
     color: white;
     padding: 50px 0px 0px 0px;
+    transition: all 0.2s ease-in-out;
  }
 ul{
     padding: 0px 0px 0px 0px;
 }
+/**/
 .liTitle
 {
     list-style-type: none;
@@ -48,18 +51,21 @@ ul{
     padding-bottom: 20px;
     font-size: 24px;
 }
+/**/
 li
 {
     list-style-type: none;
     text-indent: 20px;
     color: white;
 }
+/**/
 li:hover
 {
     background-color: white;
     text-decoration: none;
     color: black;
 }
+/**/
 li a 
 {
     line-height: 40px;
@@ -67,19 +73,19 @@ li a
     text-decoration: none;
     color: inherit;
 }
-
+/**/
 li a:hover, li a:visited
 {
     text-decoration: none !important;
     color: inherit;
 }
-
+/**/
 li a:active
 {
     text-decoration: none;
     color: white;
 }
-
+/**/
 .labelTogler{
     position: fixed;
     top: 45px;
@@ -87,17 +93,21 @@ li a:active
     color: white;
     font-size: 25px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
     /*margin: 200px;*/
 }
-
+/*sidebartoggler is actually a checkbox, by entering display: none
+we will not see the usual checkbox box, instead we will be using the label assigned to it
+in the HTML */
 #sidebartoggler {
     display: none;
 }
-
+/*apply to mySideBard placed immediately after the sidebartoggler when it is checked*/
 #sidebartoggler:checked + .mySideBard {
     left: -200px; 
 }
-
+/*same as above, but applied to the corresponding labelTogler - also this works because sidebartoggler
+is a checkbox, hence the status :checked*/
 #sidebartoggler:checked + .mySideBard + .labelTogler {
     left: 50px; 
 }
